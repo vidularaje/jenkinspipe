@@ -7,6 +7,24 @@ pipeline {
     }
 
     stages {
+		stage ('Test'){
+			steps{
+					for(int i=0;i<2;i++){
+					stage "Stage#" + i
+					print 'hello, world!'
+			
+				if(i==0){
+					git "https://github.com/capgteam/bankappgradle.git"
+					echo "Running on Stage#0"
+				}
+				else{
+					build "Declarative pipeline"
+					echo "Running on Stage#1"
+				}
+				}
+			}
+		}
+	
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
