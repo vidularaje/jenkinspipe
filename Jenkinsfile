@@ -18,7 +18,7 @@ pipeline {
 					echo "Running on Stage#0"
 				}
 				else{
-					build "Declarative pipeline"
+					build "bankapp"
 					echo "Running on Stage#1"
 				}
 				}
