@@ -8,8 +8,9 @@ pipeline {
 
     stages {
 		stage ('Test'){
-			
-			input 'Do you want to proceed?'
+			steps{
+				input 'Do you want to proceed?'
+			}
 		}
 	
         stage('Build') {
