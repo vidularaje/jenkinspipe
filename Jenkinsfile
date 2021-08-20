@@ -3,7 +3,7 @@ pipeline {
 // 	environment {
 //     env.PATH = env.PATH + ";c:\\Windows\\System32"
 //   }
-	echo env.PATH
+	
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven3"
@@ -11,6 +11,10 @@ pipeline {
     }
 
     stages {
+	    steps{
+	    echo env.PATH
+	    
+	    }
 		stage ('Test'){
 			steps{
 				input 'Do you want to proceed?'
