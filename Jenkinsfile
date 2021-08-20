@@ -11,9 +11,11 @@ pipeline {
     }
 
     stages {
+	    stage('envtest'){
 	    steps{
 	    echo env.PATH
 	    
+	    }
 	    }
 		stage ('Test'){
 			steps{
