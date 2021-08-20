@@ -11,11 +11,6 @@ pipeline {
     }
 
     stages {
-	    stage('envtest'){
-	    steps{
-	    echo env.PATH
-	    }
-	    }
 		stage ('Test'){
 			steps{
 				input 'Do you want to proceed?'
